@@ -110,11 +110,20 @@ def my_sort(lst):
         list: Een nieuwe, gesorteerde variant van lijst `lst`.
     """
 
-    alt_lst = []
+    # een loop om door alle elementen heen te gaan
     for x in range(len(lst)):
-        if lst[x - 1] > lst[x]:
-            alt_lst = []
-    lst_sorted = None
+        # kopieerd de lijst
+        lst_sorted = lst.copy()
+
+        # gaat door de indexes heen
+        for y in range(0, len(lst_sorted)):
+            # gaat weerd door elementen heen maar met een ander startpunt
+            for z in range(y + 1, len(lst_sorted)):
+                # check of het element groter of kleiner is
+                if lst_sorted[y] >= lst_sorted[z]:
+                    # verplaatst het element in de gekopieerde lijst
+                    lst_sorted[y], lst_sorted[z] = lst_sorted[z], lst_sorted[y]
+
     return lst_sorted
 
 
