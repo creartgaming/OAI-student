@@ -22,9 +22,9 @@ Let op! Het is niet toegestaan om bestaande modules te importeren en te
 """
 
 # TODO: Vul hier je naam, klas en studentnummer in.
-naam = ""
-klas = ""
-studentnummer = -1
+naam = "Sem"
+klas = "TICT-V1O ICT"
+studentnummer = '1858558'
 
 """
 1.  Sorteeralgoritme
@@ -40,7 +40,10 @@ studentnummer = -1
         lijst aanneemt bij álle tussenstappen bij toepassing van
         bovenstaand sorteeralgoritme.
 """
-#       TODO: [geef hier je antwoord]
+#       TODO: [4 < 3 dus wisselt dus word [3,4,1,2]. 3 > 4 dus blijft staan. 4 > 1 dus wisselt dus word [3,1,4,2].
+#        3 > 1 dus wisselt dus word [1,3,4,2]. 1 > 3 dus blijft staan. 3 > 4 dus blijft staan. 4 < 2 dus wisselt dus word [1,3,2,4].
+#        1 > 3 dus blijft staan. 3 > 2 dus wisselt dus word [1,2,3,4]. 1 > 2 dus blijft staan. 2 > 3 dus blijft staan.
+#        3 > 4 dus blijft staan. einde]
 """
 
     1b. Implementatie
@@ -106,6 +109,11 @@ def my_sort(lst):
     Returns:
         list: Een nieuwe, gesorteerde variant van lijst `lst`.
     """
+
+    alt_lst = []
+    for x in range(len(lst)):
+        if lst[x - 1] > lst[x]:
+            alt_lst = []
     lst_sorted = None
     return lst_sorted
 
