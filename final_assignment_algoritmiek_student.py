@@ -57,7 +57,9 @@ studentnummer = '1858558'
             Hoeveel vergelijkingen (zoals beschreven in stap 1. van de
             pseudocode) zijn nodig geweest?
 """
-#           TODO: [geef hier je antwoord]
+#           TODO: [
+#            1,2,3. 2 vergelijkingen
+#            ]
 """
 
 
@@ -65,7 +67,9 @@ studentnummer = '1858558'
             sorteeralgoritme het minst snel klaar (worst-case scenario)?
             Hoeveel vergelijkingen zijn nodig geweest?
 """
-#           TODO: [geef hier je antwoord]
+#           TODO: [
+#            3,2,1. 6 vergelijkingen
+#            ]
 """
 
 
@@ -75,7 +79,9 @@ studentnummer = '1858558'
             En wat is nu het worst-case scenario?
             Hoeveel vergelijkingen zijn er nodig?
 """
-#           TODO: [geef hier je antwoord]
+#           TODO: [
+#            best case: 1,2,3,4. 3 vergelijkingen worst case: 4,3,2,1. 14 vergelijkingen
+#            ]
 """
 
 
@@ -87,7 +93,7 @@ studentnummer = '1858558'
             En wat is nu het worst-case scenario?
             Hoeveel vergelijkingen zijn er nodig?
 """
-#           TODO: [geef hier je antwoord]
+#           TODO: [best case: 1 vergelijking voor n = 2 en worst case can een oneindige hoeveelheid aan vergelijkingen en groote zijn]
 """
 """
 
@@ -140,7 +146,18 @@ def linear_search_recursive(lst, target):
     Returns:
         bool: Of het element in de lijst voorkomt.
     """
-    return False
+    # start getal
+    start = 0
+    # loop om target getal te vinden
+    while (start < len(lst) and lst[start] < target):
+        # als niet gevonden voeg 1 bij het start getal
+        start + 1
+    # check of het getal er wel in zit of dat het getal klopt
+    if (start >= len(lst) or lst[start] != target):
+        return False
+    # als het klopt krijg je een True boolean terug
+    else:
+        return True
 
 
 """
