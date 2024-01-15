@@ -146,18 +146,15 @@ def linear_search_recursive(lst, target):
     Returns:
         bool: Of het element in de lijst voorkomt.
     """
-    # start getal
-    start = 0
-    # loop om target getal te vinden
-    while (start < len(lst) and lst[start] < target):
-        # als niet gevonden voeg 1 bij het start getal
-        start + 1
-    # check of het getal er wel in zit of dat het getal klopt
-    if (start >= len(lst) or lst[start] != target):
+    # geef false aan als de list nul is
+    if len(lst) == 0:
         return False
-    # als het klopt krijg je een True boolean terug
-    else:
+    # check of het getal klopt met het target en geeft dan true terug
+    elif lst[0] == target:
         return True
+    # als het daarbuiten valt returned het weer de functie maar dan met een ander getal
+    else:
+        return linear_search_recursive(lst[1:], target)
 
 
 """
